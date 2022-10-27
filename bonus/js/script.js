@@ -67,6 +67,7 @@ createApp({
             },3000)
         },
         stopPlay(){
+            this.play = false
             clearInterval(this.intervalId)
         }
    

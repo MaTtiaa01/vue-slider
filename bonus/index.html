@@ -14,9 +14,9 @@
     <div id="app">
 
         <div class="container">
-            <div class="slider-wrapper" tabindex="0">
+            <div class="slider-wrapper" tabindex="0" @mouseenter="stopPlay" @mouseleave="startPlay"  >
 
-                <div class="item">
+                <div class="item" >
                     <img  :src="slides[imgActive].image" :alt="slides[imgActive].image " />
                     <div class="text">
                         <h3>{{slides[imgActive].title}}</h3>

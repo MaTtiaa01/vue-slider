@@ -7,6 +7,8 @@ createApp({
     data(){
         return{
             imgActive : 0,
+            play : null,
+            intevalId : null,
             slides : [
                 {
                     image: 'img/01.webp',
@@ -57,5 +59,20 @@ createApp({
         changeSlide(index){
             this.imgActive = index
         },
+        startPlay(){
+            this.play = true
+            this.intervalId = setInterval(() => {
+                this.nextSlide()
+
+            },3000)
+        },
+        stopPlay(){
+            clearInterval(this.intervalId)
+        }
+   
+
+    },
+    mounted(){
+        this.startPlay()
     }
 }).mount("#app")

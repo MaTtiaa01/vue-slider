@@ -53,6 +53,9 @@ createApp({
             }else{
                 this.imgActive--
             }
-        }
+        },
+        changeSlide(index){
+            this.imgActive = index
+        },
     }
 }).mount("#app")

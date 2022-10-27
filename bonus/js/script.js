@@ -1,4 +1,6 @@
-
+// al click su una thumb, visualizzare in grande l'immagine corrispondente
+// applicare l'autoplay allo slider: ogni 3 secondi, cambia immagine automaticamente
+// quando il mouse va in hover sullo slider, bloccare l'autoplay e farlo riprendere quando esce
 const {createApp} = Vue;
 
 createApp({
@@ -28,7 +30,13 @@ createApp({
                         text: 'Marvel\'s Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.',
                     }
                 ],
-            
+            thumbs : [
+                'img/01.webp',
+                'img/02.webp',
+                'img/03.webp',
+                'img/04.webp',
+                'img/05.webp',
+            ]
         }
     },
     methods : {

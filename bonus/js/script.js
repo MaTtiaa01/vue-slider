@@ -7,7 +7,6 @@ createApp({
     data(){
         return{
             imgActive : 0,
-            play : null,
             intevalId : null,
             slides : [
                 {
@@ -60,14 +59,14 @@ createApp({
             this.imgActive = index
         },
         startPlay(){
-            this.play = true
+            
             this.intervalId = setInterval(() => {
                 this.nextSlide()
 
             },3000)
         },
         stopPlay(){
-            this.play = false
+            
             clearInterval(this.intervalId)
         }
    
